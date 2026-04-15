@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Value Proposition Canvas — AGT</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        background: #ffffff;
+        color: #111827;
+      }
+      .wrap {
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+      .hint {
+        margin: 0 0 12px 0;
+        color: #374151;
+        font-size: 14px;
+      }
+      svg {
+        width: 100%;
+        height: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="hint">If your IDE preview won’t render the SVG, open this HTML file in a browser.</p>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+        <title id="title">Value Proposition Canvas &#8212; Agent Governance Toolkit (AGT)</title>
+        <desc id="desc">
+          Value Proposition Canvas with a left Value Map square and a right Customer Profile circle.
+          Both are divided into three horizontally-aligned sections: top (Gains/Gain Creators), center (Jobs/Products &amp; Services), bottom (Pains/Pain Relievers).
+        </desc>
+
+        <defs>
+          <style>
+            :root {
+              --ink: #111827;           /* gray-900 */
+              --muted: #374151;         /* gray-700 */
+              --grid: #9ca3af;          /* gray-400 */
+              --bg: #ffffff;
+
+              --gainFill: #e0e7ff;      /* indigo-100 */
+              --jobFill: #f3f4f6;       /* gray-100 */
+              --painFill: #fee2e2;      /* red-100 */
+
+              --gainCreatorFill: #d1fae5;  /* emerald-100 */
+              --productsFill: #dbeafe;     /* blue-100 */
+              --painRelieverFill: #fef3c7; /* amber-100 */
+            }
+
+            text {
+              font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+              fill: var(--ink);
+            }
+
+            .title {
+              font-size: 28px;
+              font-weight: 700;
+            }
+
+            .subtitle {
+              font-size: 14px;
+              fill: var(--muted);
+            }
+
+            .sectionLabel {
+              font-size: 18px;
+              font-weight: 700;
+              letter-spacing: 0.4px;
+            }
+
+            .boxTitle {
+              font-size: 16px;
+              font-weight: 700;
+            }
+
+            .bullet {
+              font-size: 13px;
+              fill: var(--ink);
+            }
+
+            .connectorLabel {
+              font-size: 12px;
+              fill: var(--muted);
+              font-weight: 600;
+              letter-spacing: 0.3px;
+            }
+
+            .outline {
+              stroke: var(--ink);
+              stroke-width: 3;
+            }
+
+            .separator {
+              stroke: var(--ink);
+              stroke-width: 2;
+            }
+
+            .connector {
+              stroke: var(--muted);
+              stroke-width: 2;
+              stroke-dasharray: 6 6;
+            }
+          </style>
+
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.2" refY="3" orient="auto">
+            <path d="M0,0 L8.2,3 L0,6 Z" fill="#374151" />
+          </marker>
+
+          <clipPath id="clipValueSquare">
+            <rect x="80" y="150" width="650" height="650" rx="14" ry="14" />
+          </clipPath>
+
+          <clipPath id="clipCustomerCircle">
+            <circle cx="1220" cy="475" r="325" />
+          </clipPath>
+        </defs>
+
+        <rect x="0" y="0" width="1600" height="900" fill="var(--bg)" />
+
+        <text class="title" x="800" y="72" text-anchor="middle">Value Proposition Canvas &#8212; Agent Governance Toolkit (AGT)</text>
+        <text class="subtitle" x="800" y="104" text-anchor="middle">
+          Canvas focus: security &amp; platform teams responsible for shipping agentic applications into production
+        </text>
+
+        <text class="sectionLabel" x="405" y="138" text-anchor="middle">Value Map</text>
+        <text class="sectionLabel" x="1220" y="138" text-anchor="middle">Customer Profile</text>
+
+        <g id="value-map">
+          <rect x="80" y="150" width="650" height="650" rx="14" ry="14" fill="none" class="outline" />
+
+          <g clip-path="url(#clipValueSquare)">
+            <rect x="80" y="150" width="650" height="210" fill="var(--gainCreatorFill)" />
+            <rect x="80" y="360" width="650" height="230" fill="var(--productsFill)" />
+            <rect x="80" y="590" width="650" height="210" fill="var(--painRelieverFill)" />
+          </g>
+
+          <line x1="80" y1="360" x2="730" y2="360" class="separator" />
+          <line x1="80" y1="590" x2="730" y2="590" class="separator" />
+
+          <text class="boxTitle" x="104" y="184">Gain Creators</text>
+          <text class="boxTitle" x="104" y="394">Products &amp; Services</text>
+          <text class="boxTitle" x="104" y="624">Pain Relievers</text>
+
+          <text class="bullet" x="104" y="212">
+            <tspan x="104" dy="0">GC1 OWASP 10/10 mapping + verification</tspan>
+            <tspan x="104" dy="18">GC2 Benchmarked enforcement (0.00% SVR)</tspan>
+            <tspan x="104" dy="18">GC3 Sub-ms overhead (published latency)</tspan>
+            <tspan x="104" dy="18">GC4 Broad adapters + multi-language SDKs</tspan>
+            <tspan x="104" dy="18">GC5 Open-source (MIT), deploy-anywhere</tspan>
+            <tspan x="104" dy="18">GC6 Fleet visibility: discovery + dashboard</tspan>
+          </text>
+
+          <text class="bullet" x="104" y="422">
+            <tspan x="104" dy="0">PS1 Policy engine + capability model (Agent OS)</tspan>
+            <tspan x="104" dy="18">PS2 Zero-trust identity + trust scoring (AgentMesh)</tspan>
+            <tspan x="104" dy="18">PS3 Execution rings + kill switch + sagas (Runtime)</tspan>
+            <tspan x="104" dy="18">PS4 Agent SRE: SLOs, error budgets, circuit breakers</tspan>
+            <tspan x="104" dy="18">PS5 MCP scanner/gateway (tool poisoning detection)</tspan>
+            <tspan x="104" dy="18">PS6 Unified CLI: doctor, verify, lint-policy, integrity</tspan>
+          </text>
+
+          <text class="bullet" x="104" y="652">
+            <tspan x="104" dy="0">PR1 Deterministic allow/deny before tool execution</tspan>
+            <tspan x="104" dy="18">PR2 Deny-by-default + scoped capabilities</tspan>
+            <tspan x="104" dy="18">PR3 Audit trail for every attempt + decision</tspan>
+            <tspan x="104" dy="18">PR4 Human approvals for high-risk actions</tspan>
+            <tspan x="104" dy="18">PR5 Cryptographic identity, trust gates, secure A2A</tspan>
+            <tspan x="104" dy="18">PR6 Containment: rings, resource limits, kill switch</tspan>
+          </text>
+        </g>
+
+        <g id="customer-profile">
+          <circle cx="1220" cy="475" r="325" fill="none" class="outline" />
+
+          <g clip-path="url(#clipCustomerCircle)">
+            <rect x="895" y="150" width="650" height="210" fill="var(--gainFill)" />
+            <rect x="895" y="360" width="650" height="230" fill="var(--jobFill)" />
+            <rect x="895" y="590" width="650" height="210" fill="var(--painFill)" />
+
+            <text class="boxTitle" x="1220" y="184" text-anchor="middle">Gains</text>
+            <text class="boxTitle" x="1220" y="394" text-anchor="middle">Customer Jobs (center)</text>
+            <text class="boxTitle" x="1220" y="624" text-anchor="middle">Pains</text>
+
+            <text class="bullet" x="930" y="212">
+              <tspan x="930" dy="0">G1 Deterministic control of agent actions</tspan>
+              <tspan x="930" dy="18">G2 Low-latency governance at scale</tspan>
+              <tspan x="930" dy="18">G3 Faster security/compliance sign-off</tspan>
+              <tspan x="930" dy="18">G4 Safer multi-agent collaboration (trust)</tspan>
+              <tspan x="930" dy="18">G5 Reliable ops: SLOs, rollback, replay</tspan>
+              <tspan x="930" dy="18">G6 Open + extensible, no hard vendor lock</tspan>
+            </text>
+
+            <text class="bullet" x="930" y="422">
+              <tspan x="930" dy="0">J1 Ship agentic apps with controlled side effects</tspan>
+              <tspan x="930" dy="18">J2 Enforce least-privilege for tools &amp; data</tspan>
+              <tspan x="930" dy="18">J3 Produce audit evidence stakeholders accept</tspan>
+              <tspan x="930" dy="18">J4 Operate safely: stop, contain, recover</tspan>
+              <tspan x="930" dy="18">J5 Integrate governance into existing frameworks</tspan>
+            </text>
+
+            <text class="bullet" x="930" y="652">
+              <tspan x="930" dy="0">P1 Prompt-only safety is bypassed (jailbreaks)</tspan>
+              <tspan x="930" dy="18">P2 Overprivileged tools lead to data loss/exfil</tspan>
+              <tspan x="930" dy="18">P3 Weak auditability slows approvals &amp; launches</tspan>
+              <tspan x="930" dy="18">P4 Identity/privilege abuse in multi-agent setups</tspan>
+              <tspan x="930" dy="18">P5 MCP/tool supply-chain risks (poisoning)</tspan>
+              <tspan x="930" dy="18">P6 Cascading failures; hard to contain &amp; debug</tspan>
+            </text>
+          </g>
+
+          <line x1="916" y1="360" x2="1524" y2="360" class="separator" />
+          <line x1="916" y1="590" x2="1524" y2="590" class="separator" />
+        </g>
+
+        <g id="fit-connectors">
+          <line x1="730" y1="255" x2="895" y2="255" class="connector" marker-end="url(#arrow)" />
+          <text class="connectorLabel" x="812.5" y="242" text-anchor="middle">creates</text>
+
+          <line x1="730" y1="475" x2="895" y2="475" class="connector" marker-end="url(#arrow)" />
+          <text class="connectorLabel" x="812.5" y="462" text-anchor="middle">enables</text>
+
+          <line x1="730" y1="695" x2="895" y2="695" class="connector" marker-end="url(#arrow)" />
+          <text class="connectorLabel" x="812.5" y="682" text-anchor="middle">relieves</text>
+        </g>
+
+        <text class="subtitle" x="80" y="850">
+          Note: Diagram uses short labels; see the accompanying markdown for full definitions and explicit mappings.
+        </text>
+      </svg>
+    </div>
+  </body>
+</html>
+
